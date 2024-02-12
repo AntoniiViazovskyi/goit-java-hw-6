@@ -20,8 +20,8 @@ public class DatabaseQueryService {
 
     public List<MaxProjectCountClient> findMaxProjectsClient() {
         List<MaxProjectCountClient> list = new ArrayList<>();
-        try (Connection connection = Database.getInstance().getConnection()) {
-            Statement statement = connection.createStatement();
+        try (Connection connection = Database.getInstance().getConnection();
+            Statement statement = connection.createStatement()) {
             ResultSet resultSet = statement.executeQuery(
                     Files.readString(
                             Path.of("src/main/resources/sql/find_max_projects_client.sql"), StandardCharsets.UTF_8)
@@ -41,8 +41,8 @@ public class DatabaseQueryService {
 
     public List<LongestProject> findLongestProject() {
         List<LongestProject> list = new ArrayList<>();
-        try (Connection connection = Database.getInstance().getConnection()) {
-            Statement statement = connection.createStatement();
+        try (Connection connection = Database.getInstance().getConnection();
+             Statement statement = connection.createStatement()) {
             ResultSet resultSet = statement.executeQuery(
                     Files.readString(
                             Path.of("src/main/resources/sql/find_longest_project.sql"), StandardCharsets.UTF_8)
@@ -61,8 +61,8 @@ public class DatabaseQueryService {
 
     public List<MaxSalaryWorker> findMaxSalaryWorker() {
         List<MaxSalaryWorker> list = new ArrayList<>();
-        try (Connection connection = Database.getInstance().getConnection()) {
-            Statement statement = connection.createStatement();
+        try (Connection connection = Database.getInstance().getConnection();
+             Statement statement = connection.createStatement()) {
             ResultSet resultSet = statement.executeQuery(
                     Files.readString(
                             Path.of("src/main/resources/sql/find_max_salary_worker.sql"), StandardCharsets.UTF_8)
@@ -80,8 +80,8 @@ public class DatabaseQueryService {
 
     public List<YoungestEldestWorker> findYoungestEldestWorkers() {
         List<YoungestEldestWorker> list = new ArrayList<>();
-        try (Connection connection = Database.getInstance().getConnection()) {
-            Statement statement = connection.createStatement();
+        try (Connection connection = Database.getInstance().getConnection();
+             Statement statement = connection.createStatement()) {
             ResultSet resultSet = statement.executeQuery(
                     Files.readString(
                             Path.of("src/main/resources/sql/find_youngest_eldest_workers.sql"), StandardCharsets.UTF_8)
