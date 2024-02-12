@@ -89,7 +89,7 @@ public class DatabaseQueryService {
             while (resultSet.next()) {
                 YoungestEldestWorker worker =
                         new YoungestEldestWorker(resultSet.getString(1), resultSet.getString(2),
-                                resultSet.getDate(3));
+                                resultSet.getDate(3).toLocalDate());
                 list.add(worker);
 
             }

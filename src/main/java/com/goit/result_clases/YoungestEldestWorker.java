@@ -1,13 +1,14 @@
 package com.goit.result_clases;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class YoungestEldestWorker {
     private String type;
     private String name;
-    private Date birthday;
+    private LocalDate birthday;
 
-    public YoungestEldestWorker(String type, String name, Date birthday) {
+    public YoungestEldestWorker(String type, String name, LocalDate birthday) {
         this.type=type;
         this.name = name;
         this.birthday = birthday;
@@ -29,11 +30,11 @@ public class YoungestEldestWorker {
         this.name = name;
     }
 
-    public Date getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 
